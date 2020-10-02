@@ -43,7 +43,7 @@ const deprecate: ElectronInternal.DeprecationUtil = {
     return function (this: any) {
       warn();
       fn.apply(this, arguments);
-    } as any;
+    } as any as typeof fn;
   },
 
   // change the name of a function
